@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Immediately</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" integrity="sha384-b92sF+wDNTHrfEtRaYo+EpcA8FUyHOSXrdxKc9XB9kaaX1rSQAgMevW6cYeE5Bdv"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" integrity="sha384-O/61W5+JcqpaKJvGYKd2WFU6LmUZmj6tnkyaunOvHcQ+NzAgIR51q2t2xOoGg86z"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" integrity="sha384-f7i3wx95GUaq/1ED3jYQs30oXd4a1nL5q5TIA77QbZdDimOMAqtQte21IkV6Nt6k"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="home.html" class="navbar-link"><strong>Immediately</strong></a>
+        <div class="navbar-link navbar-link-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="navbar-items">
+            <a href="register-your-service.html" class="navbar-link">Register your service</a>
+            <a href="#" class="navbar-link">Explore</a>
+        </nav>
+        <nav class="navbar-items navbar-items-right">
+            <a href="signup.html" class="navbar-link">Sign up</a>
+            <a href="signin.html" class="navbar-link">Sign in</a>
+        </nav>
+    </div>
+
+    <div class="header">
+        <h2>Find a service and beat the queue</h2>
+    </div>
+
+    <div class="content">
+        <h2>Add a service personnel</h2>
+        <form class="pure-form pure-form-stacked">
+            <div class="pure-g">
+                <div class="pure-u-md-1-2 pure-u-lg-1-2 padding-bottom-20">
+                    <div class="pure-u-1">
+                        <label for="service-item-name">Name</label>
+                        <input id="service-item-name" class="pure-u-23-24" type="text" required />
+                    </div>
+                    <div class="pure-u-1">
+                        <label for="service-item-description">Description</label>
+                        <textarea rows=8 class="pure-u-23-24"></textarea>
+                    </div>
+                    <div class="pure-u-1 padding-bottom-20">
+                        <label for="service-item-description">Service Items</label>
+                        <select id="personnel-services" class="pure-u-23-24" data-placeholder="Choose service items..."
+                            multiple class="chosen-select">
+                            <option value="basin-treatment">Basin Treatment</option>
+                            <option value="bleach-bath">Bleach Bath</option>
+                            <option value="extension-take-off">Extension Take Off</option>
+                            <option value="fringe-cut">Fringe Cut</option>
+                            <option value="gents-cut-and-wash">Gents' Cut and Wash</option>
+                            <option value="kids-cut-and-wash">Kids' Cut and Wash</option>
+                            <option value="ladioes-cut-and-wash">Ladies' Cut and Wash</option>
+                            <option value="volume-straightening">Volume Straightening</option>
+                            <option value="wash-and-blowdry-extensioned-hair">Wash and Blowdry Extensioned Hair</option>
+                        </select>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="pure-u-8-24">
+                            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2019 by Freddie Sunarso, All rights reserved</p>
+    </div>
+
+    <script>
+        function navbarClassToggle() {
+            const navs = document.querySelectorAll('.navbar-items');
+            navs.forEach(nav => nav.classList.toggle('navbar-toggle-show'));
+        }
+        document
+            .querySelector('.navbar-link-toggle')
+            .addEventListener('click', navbarClassToggle);
+        $(function () {
+            $("#personnel-services").chosen({ disable_search_threshold: 10 });
+        });
+    </script>
+
+</body>
+
+</html>

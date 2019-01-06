@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', serif;
+  margin: 0;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #0a3f57;
+  color: white;
+}
+
+.content {
+  background-color: white;
+  margin: auto;
+  max-width: 990px;
+}
+
+.service-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.service-flex-container > .service-item {
+  flex-basis: auto;
+  background-color: #aaa;
+  text-align: center;
+  margin: 5px;
+  height: 350px;
+  width: 320px;
+}
+
+.service-flex-container > .service-item > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 0.5px;
+  text-align: center;
+  background: #fdfcde;
+}
+
+.navbar {
+  background-color: #6fe3c4;
+  display: flex;
+  padding: 16px;
+  color: #1e824c;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-link {
+  padding-right: 8px;
+}
+.navbar-items {
+  display: flex;
+}
+.navbar-items-right {
+  margin-left: auto;
+}
+.navbar-link-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .content {
+    max-width: 660px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .content {
+    max-width: 320px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .navbar-items,
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-items {
+    display: none;
+  }
+  .navbar-items-right {
+    margin-left: 0;
+  }
+  .navbar-toggle-show {
+    display: flex;
+  }
+  .navbar-link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
+}
+
+.padding-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
+
+.login-content {
+  margin: auto;
+  max-width: 300px;
+}
+
+.login-toggle {
+  font-size: 14px;
+}
+
+.or-divider {
+  opacity: 0.5;
+  font-weight: 300;
+  margin: auto;
+  text-align: center;
+}
+
+.timetable {
+  overflow-x: auto;
+}
+
+.timetable-busy {
+  background-color: #cbcbcb !important;
+}
+
+.timetable-booking {
+  background-color: yellow !important;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Immediately</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="home.html" class="navbar-link"><strong>Immediately</strong></a>
+    <div class="navbar-link navbar-link-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar-items">
+      <a href="register-your-service.html" class="navbar-link">Register your service</a>
+      <a href="#" class="navbar-link">Explore</a>
+    </nav>
+    <nav class="navbar-items navbar-items-right">
+      <a href="signup.html" class="navbar-link">Sign up</a>
+      <a href="signin.html" class="navbar-link">Sign in</a>
+    </nav>
+  </div>
+
+  <div class="header">
+    <h2>Find a service and beat the queue</h2>
+  </div>
+
+  <div class="content">
+    <h3>What services are you looking for?</h3>
+    <div class="service-flex-container">
+      <div class="service-item">
+        <a href="service-details.html">
+          <img src="https://cdn.websites.hibu.com/203d04c4648e49b5837d8fbc64354067/dms3rep/multi/mobile/image-1.jpg" />
+          <h3>Hairdressing</h3>
+          <span>100 Elizabeth St</span><br />
+          <span>Sydney, NSW 2000</span><br />
+          <span><i class="fas fa-phone"></i> <a href="tel:+61291234567">(02) 9123 4567</a></span>
+        </a>
+      </div>
+      <div class="service-item">
+        <img src="https://cdn.websites.hibu.com/1b311853d38a4f5d9c9a6670349d64fa/dms3rep/multi/06.jpg" />
+        <h3>Podiatry</h3>
+        <span>99 Elizabeth St</span><br />
+        <span>Sydney, NSW 2000</span>
+      </div>
+      <div class="service-item">
+        <img src="https://cdn.websites.hibu.com/a6286f673f7b4fcd93cb47dd98c6ba12/dms3rep/multi/mobile/home-image1.jpg" />
+        <h3>Optometry</h3>
+        <span>98 Elizabeth St</span><br />
+        <span>Sydney, NSW 2000</span>
+      </div>
+      <div class="service-item">
+        <img src="https://cdn.website.thryv.com/be1c550a13ce4c6aacfb28810d5fe0ab/dms3rep/multi/mobile/369.jpg" />
+        <h3>Financial Advisor</h3>
+        <span>97 Elizabeth St</span><br />
+        <span>Sydney, NSW 2000</span>
+      </div>
+      <div class="service-item">
+        <img src="https://cdn.websites.hibu.com/475750584e6a4e6db5b962a8f7ab351e/dms3rep/multi/mobile/Home1.jpg" />
+        <h3>Auto Repair</h3>
+        <span>96 Elizabeth St</span><br />
+        <span>Sydney, NSW 2000</span>
+      </div>
+      <div class="service-item">
+        <img src="https://cdn.websites.hibu.com/a126a434a21743eb9fb9d60808361cb9/dms3rep/multi/mobile/Physical+therapy2.jpg" />
+        <h3>Physiotherapy</h3>
+        <span>95 Elizabeth St</span><br />
+        <span>Sydney, NSW 2000</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2019 by Freddie Sunarso, All rights reserved</p>
+  </div>
+
+  <script>
+    function navbarClassToggle() {
+      const navs = document.querySelectorAll('.navbar-items');
+      navs.forEach(nav => nav.classList.toggle('navbar-toggle-show'));
+    }
+    document
+      .querySelector('.navbar-link-toggle')
+      .addEventListener('click', navbarClassToggle);
+  </script>
+
+</body>
+
+</html>
